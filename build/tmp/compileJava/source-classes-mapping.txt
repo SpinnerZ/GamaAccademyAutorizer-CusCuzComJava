@@ -1,2 +1,0 @@
-cuscuzcomjava/autorizer/AutorizerApplication.java
- cuscuzcomjava.autorizer.AutorizerApplication

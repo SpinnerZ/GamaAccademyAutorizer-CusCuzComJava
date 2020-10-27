@@ -19,17 +19,21 @@ public class AccountService {
     @Autowired
     ViolationRepository violationRepository;
 
-    @Autowired
-    Violation violation;
 
+    Violation violation;
     List<Violation> violationList;
 
     public Account createAccount( Account account){
         if(accountRepository.findAll() == null){
             return accountRepository.save(account);
         }
-        violationRepository.save(violation.setViolations(ViolationsEnum.ACCOUNT_ALREADY_INITIALIZED));
 
+        violation.setViolations(ViolationsEnum.ACCOUNT_ALREADY_INITIALIZED);
+        violationRepository.save(violation);
 
+        account = accountRepository.findAll().get(0);
+        account.setViolationList(violationRepository.findAll());
+
+        return account;
     }
 }
