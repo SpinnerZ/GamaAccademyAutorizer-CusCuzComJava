@@ -19,6 +19,11 @@ public class Account {
   @Column
   private int availableLimit;
 
+
+  public int getId() {
+    return id;
+  }
+
   public boolean isActiveCard() {
     return activeCard;
   }
