@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.List;
 
 @Entity
 public class Account {
@@ -18,6 +19,9 @@ public class Account {
 
   @Column
   private int availableLimit;
+
+  @Column
+  private List<Violation> violationList;
 
 
   public int getId() {
@@ -38,5 +42,13 @@ public class Account {
 
   public void setAvailableLimit(int availableLimit) {
     this.availableLimit = availableLimit;
+  }
+
+  public List<Violation> getViolationList() {
+    return violationList;
+  }
+
+  public void setViolationList(List<Violation> violationList) {
+    this.violationList = violationList;
   }
 }
