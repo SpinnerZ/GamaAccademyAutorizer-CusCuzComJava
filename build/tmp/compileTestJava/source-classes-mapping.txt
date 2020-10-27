@@ -1,0 +1,2 @@
+cuscuzcomjava/autorizer/AutorizerApplicationTests.java
+ cuscuzcomjava.autorizer.AutorizerApplicationTests
